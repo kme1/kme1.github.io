@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Ken's Image Gallery</title>
+		<meta http-equiv="Content-Type"	content="text/html; charset=utf-8"/>
+		<link href="styles1.css" rel="stylesheet" type="text/css"/>
+	</head>
+
+	<body>
+		<div id="pageheader">
+			<p>Welcome to the pictures.</p>
+		</div><!--END id=pageheader-->
+
+		<script>
+			function navigateSlides() {
+			  var currentSlide = ...;
+			  document.querySelector('#prev-slide').id = '';
+			  document.querySelector('#next-slide').id = '';
+			  currentSlide.previousElementSibling.id = 'prev-slide';
+			  currentSlide.nextElementSibling.id = 'next-slide';
+			}
+		</script>
+
+		<style>
+			.slide {
+			  /* Need to be a stacking context to be element()-able. */
+			  position: relative;
+			}
+			#prev-preview, #next-preview {
+			  position: fixed;
+			}
+			#prev-preview { background: element(#prev-slide); }
+			#next-preview { background: element(#next-slide); }			
+		</style>
+
+		<a id='prev-preview'>Previous Slide</a>
+		<a id='next-preview'>Next Slide</a>
+		<section class='slide'>...</section>
+		<section class='slide current-slide'>...</section>
+
+		<!-- Display a list of available tutorials -->
+		<div class="gallery_heading">
+			<h3>Here are some photographs I have taken along the way.</h3>
+			<p>Please drop me a line if you would like to add something to the gallery.</p>
+			<a href="mailto:kme.edwards@gmail.com">Connect with Me</a>
+		</div><!--END class=gallery_heading-->
+		
+		<div class="gallery_photos">
+			<a target="_blank" href="gallery/hong_kong_2010/001.jpg">
+			<img id="pic" src="gallery/hong_kong_2010/001.jpg" width="750" height="800"
+				alt="Hong Kong 1">
+			</a>
+			<img src="gallery/hong_kong_2010/002.jpg" alt="Hong Kong 2"/>
+			<img src="gallery/hong_kong_2010/003.jpg" alt="Hong Kong 3"/>
+			<img src="gallery/hong_kong_2010/004.jpg" alt="Hong Kong 4"/>
+		</div><!--END class=gallery_photos-->
+		
+		<div id="pagefooter">
+			<p>Comments, Suggestions, or Questions you are always welcome.<br/>
+				Please feel free to email me at:
+				<a href="mailto:kme.edwards@gmail.com">kme.edwards@gmail.com</a>
+			</p>
+		</div><!--END id=pagefooter-->
+	</body>
+</html>
