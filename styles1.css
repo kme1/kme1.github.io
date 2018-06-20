@@ -1,0 +1,476 @@
+/*stylesheet.css - Ken's CSS Stylesheet*/
+/*
+.homepage_background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    opacity: 0.25;
+}
+
+#pageheader p {
+	font-family: "Times New Roman";
+	color: purple;
+	font-size: 355%;
+	font-style: bold;
+	text-align: center;
+	line-height: 100%;
+}
+
+body {
+	background-color: rgb(205,220,255);
+	/*background-size: 50% 50%;
+}
+*/
+
+/*
+#delay {
+  font-size: 14px;
+  transition-property: font-size;
+  transition-duration: 4s;
+  transition-delay: 2s;
+}
+
+#delay:hover {
+  font-size: 36px;
+}
+
+.box {
+    border-style: solid;
+    border-width: 1px;
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: #0000FF;
+    -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+    transition: width 2s, height 2s, background-color 2s, transform 2s;
+}
+
+.box:hover {
+    background-color: #FFCCCC;
+    width: 200px;
+    height: 200px;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+*/
+
+a {
+	color: black;
+	background-color: white;
+	border: 1mm ridge #32a1ce;
+	border-style: outset;
+  	padding: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin: 10px;
+	transition: all 2s ease-out;
+}
+
+button {
+	color: lime;
+	background-color: black;
+	border: 1.5mm ridge lime;
+	border-style: outset;
+	font-size: 120%;
+	font-style: bold;
+  	padding: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin: 10px;
+}
+
+/*The first line of every <p> element
+	text-transform: uppercase;
+*/
+p::first-line {
+	color: green;
+}
+
+/*
+a:hover must be placed after a:link & a:visited, otherwise the cascading rules will hide the 'color' property of the a:hover rule*/
+a:link {
+	background-color: white;
+	border: 5px ridge black;
+	font-style: bold;
+	position: relative;
+	/*border-style: outset;
+	display: block;	
+	background: element( #pic );
+		list-style-image: element( #pic );*/
+	object-fit: fill;
+	object-position: center;
+	background-position: center;
+	padding: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin: 10px;
+}
+
+
+a.external:visited {
+	text-decoration: none;
+	color: white;
+	font-style: bold;
+	background-color: aqua;
+}/*
+a:focus, */
+
+a:hover {
+	background-color: black;
+	color: white;
+	font-family: Georgia;
+	font-size: 200%;
+	font-style: bold;
+	border: 1.5mm ridge #32a1ce;
+	border-style: outset;
+	padding: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin: 10px;
+}
+
+/*
+a:active is placed after a:hover, the active color (lime) will apply when the user both activates and hovers over the a element
+active=time between when the user presses the mouse button & releases it*/
+a:active {
+  background-color: lime;
+  border-color: black;
+  color: black;
+}
+
+button::before { 
+  content: "«";
+  color: red;
+}
+
+button#btn1::after { 
+  content: "»";
+  color: white;
+}
+
+li {
+  list-style-type: none;
+  position: relative;
+  margin: 2px;
+  padding: 0.5em 0.5em 0.5em 2em;
+  background: lightgrey;
+  font-family: sans-serif;
+}
+
+/*
+li.done {
+  background: #CCFF99;
+}
+*/
+/*
+no icons used, and the check-mark is actually the ::before that has been styled in CSS*/	
+li.done::before {
+	content: 'Before';
+	position: absolute;
+	color: #009933;
+	border-color: orange;
+	border-style: solid;
+	border-width: 0 0.3em 0.25em 0;
+	height: 1em;
+	top: 1.3em;
+	left: 0.6em;
+	margin-top: -1em;
+	transform: rotate(45deg);
+	width: 0.5em;
+}
+
+li.done::after {
+	content: 'Floated After';
+	position: absolute;
+	border-color: black;
+	border-style: solid;
+	border-width: 3em 25em;
+	color: orange;
+	font-family: Georgia;
+	font-style: bold;
+	height: 1em;
+	top: 1.3em;
+	left: 0.6em;
+/*
+margin-top: -1em;
+	transform: rotate(45deg);
+	width: 0.5em;
+*/	
+}
+
+#floatme { float: left; width: 50%; }
+
+/* To get an empty column, just indicate a hex code for a non-breaking space: \a0 as the content (use \0000a0 when following such a space with other characters) */
+.example::before {
+  content: "Floated Before";
+  float: left;
+  width: 25%
+}
+.example::after {
+  content: "Floated After";
+  float: right;
+  width:25%
+}
+
+/* For styling */
+.example::before, .example::after {
+  background: yellow;
+  color: red;
+}
+
+.ribbon {
+  background-color: #5BC8F7;
+}
+
+.ribbon::before {
+  content: "Look at this orange box.";
+  background-color: #FFBA10;
+  border-color: black;
+  border-style: dotted;
+}
+
+
+h3#pagefooter { 
+	text-align: center;
+	color: lime;
+}
+
+p#contact-info { color: aqua; }
+
+/*
+div:hover {
+	background-color: #F89B4D;
+}
+
+*/
+
+/*
+a:hover {
+	text-decoration: none;
+	color: white;
+	background-color: navy;
+}
+
+a:active {
+	color: aqua;
+	background-color: navy;
+}
+*/
+
+p { padding-left:60px; }
+
+#foo {
+	border-radius:50px;
+	width:50px;
+	height:50px;
+	background:#c00;
+	position:absolute;
+	top:0;
+	left:0;
+	-moz-transition: transform 2s; 
+	-webkit-transition: transform 2s;  
+	-ms-transition: transform 2s;  
+	-o-transition: transform 2s;  
+	transition: transform 2s;  
+}
+
+/*#tutorials_navigation src {
+	opacity: 0.30;
+	width: 200px;
+	height: 175px;
+	font-weight: bold;
+	border: 1px dotted #7da5d8;
+	line-height: 140%;
+}*/
+
+#tutorials_navigation li {
+	list-style-type: none;
+	/*display: inline-block;
+	font-weight: bold;*/
+	font-size: large;
+	margin-top: 5px;
+	line-height: 120%;
+}
+
+#tutorials_navigation li a {
+	background: #000;
+	color: #32a1ce;
+	border: 1.25mm ridge #32a1ce;
+	border-style: outset;
+	padding: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin: 0px;
+}
+
+.fun {
+	color: #339999;
+	font-family: Georgia, Times, serif;
+	letter-spacing: 0.05em; /*5% of the height of the M character*/
+}
+
+.fun h3 {
+	color: green;
+}
+
+.gallery_heading {
+	font-family: Georgia;
+	color: rgb(25,22,166);
+	font-size: 220%;
+	font-style: bold;
+	text-align: center;
+	/*background-color: rgb(205,220,255);
+	background-position: center;
+	background-size: 50px, 25px;
+	padding-top: 10px;
+	padding-bottom: 10px;*/
+}
+
+.gallery_heading h3 {
+	color: rgb(10,55,125);
+	font-size: 80%;
+	font-style: lighter;
+	padding-bottom: 33px;
+	text-shadow: 3px 3px 0px green;
+}
+
+.gallery_heading p {
+	/*color: rgb(10,165,155);*/
+	font-size: 70%;
+/*	font-style: lighter;
+	padding-bottom: 10px;
+	color: rgb(150,155,100);
+	font-size: 150%;*/
+}
+
+.gallery_heading a {
+	color: green;
+	font-size: 65%;
+/*	padding-bottom: 50px; 
+	border: 20px;
+	font-style: lighter;
+	color: rgb(150,155,100);
+	*/
+}
+
+#bodycontent h3 {
+	/*color: rgb(25,22,166);*/
+	font-style: lighter;
+	text-align: center;
+	line-height: 135%;
+	padding-top: 20px;
+}
+
+/*IMAGE Formatting*/
+.gallery_photos img {
+	border: 15px ridge white;
+	border-style: outset;
+	display: block;	
+	/*background: element( #pic );*/
+	list-style-image: element( #pic );
+	object-fit: fill;
+	object-position: center;
+	position: relative;
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	margin-bottom: 20px;
+	margin-top: 40px;
+}
+
+/*TABLE Formatting*/
+table {
+	border-collapse: collapse;
+}	
+
+td {
+	border: 2px solid black;
+	padding: 0.4em;
+}
+
+table.friends th {
+	border: 2px solid black;
+	background: gray;
+	color: white;
+	padding: 0.2em;
+}
+
+table.friends caption {
+	color: rgb(50,100,100);
+	font-size: large;
+	text-align: center;
+	padding-bottom: 5px;
+	font-weight: bold;
+}
+
+table.family th {
+	border: 2px solid black;
+	background: blue;
+	color: silver;
+	padding: 0.2em;
+}
+
+table.events {
+	border-collapse: collapse;
+}
+
+table.events caption {
+	color: #000066;
+	font-size: large;
+	text-align: center;
+	padding-bottom: 5px;
+	font-weight: bold;
+}
+
+table.events th, table.events td {
+	padding: 4px;
+	border: 2px solid #000066;
+}
+
+table.events th {
+	text-align: left;
+	background: url(pics/events_header.jpg);
+	color: #ffffff;
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-left: 2px;
+	padding-right: 2px;
+}
+
+table.events td {
+	background: #e2edff /*url(pics/blue_water.jpg)*/ repeat-x bottom;
+}
+
+/*
+#pagefooter p {
+	font-style: italic;
+	font-size: 115%;
+	font-weight: bold;
+	font-family: Georgia, Times, serif;
+	color: rgb(50,105,135);
+	padding: 10px;
+	padding-left: 15px;
+	padding-right: 0px;
+	border: 5px double rgb(5,105,150);/*border-width:5px; border-style:double; border-color:blue;
+	line-height: 135%;
+}
+
+#pagefooter h3 {
+	font-family: "Trebuchet MS", Helvetica, Arial, sans-serif;
+	font-size: 135%;
+	/*background-color: navy;
+	color: rgb(50,50,250);
+	padding: 5px;
+}
+
+#contact-info {
+	font-style: bold;
+	font-size: large;
+	color: blue;
+	line-height: 135%;
+}
+
+*/
