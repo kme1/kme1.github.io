@@ -25,7 +25,11 @@ body {
 }
 */
 
-/*
+#btn0, #btn1 {
+	padding: 10px;
+	margin: 10px;	
+}
+
 #delay {
   font-size: 14px;
   transition-property: font-size;
@@ -37,6 +41,7 @@ body {
   font-size: 36px;
 }
 
+/*
 .box {
     border-style: solid;
     border-width: 1px;
